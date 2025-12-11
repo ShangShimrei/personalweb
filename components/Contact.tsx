@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
           <div className="relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16">
             <div className="flex flex-col justify-between">
               <div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4 leading-none">Let's work <br/>together</h2>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4 leading-none">Wanna built with me?</h2>
                 <p className="text-zinc-400 font-light mb-6 leading-relaxed text-base md:text-lg text-justify">
                   Have a project in mind? I'm always open to discussing new ideas, opportunities, or just having a chat about design.
                 </p>
@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full bg-white/5 border border-white/10 px-5 py-3 text-white focus:outline-none focus:border-white/50 focus:bg-white/10 transition-all placeholder-zinc-600 rounded-none text-sm"
-                      placeholder="Jane Doe"
+                      placeholder="nawui aming"
                    />
                  </div>
                  <div>
@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full bg-white/5 border border-white/10 px-5 py-3 text-white focus:outline-none focus:border-white/50 focus:bg-white/10 transition-all placeholder-zinc-600 rounded-none text-sm"
-                      placeholder="jane@example.com"
+                      placeholder="nawui@aming.com"
                    />
                  </div>
                  <div>
