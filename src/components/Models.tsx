@@ -1,5 +1,5 @@
 import React from 'react';
-import { AI_MODELS } from '../constants/constants';
+import { AI_MODELS } from '../constants';
 
 const Models: React.FC = () => {
   return (

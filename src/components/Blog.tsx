@@ -1,5 +1,5 @@
 import React from 'react';
-import { BLOG_POSTS } from '../constants/constants';
+import { BLOG_POSTS } from '../constants';
 import { ArrowRight } from 'lucide-react';
 
 const Blog: React.FC = () => {

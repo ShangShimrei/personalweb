@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Icon } from './Icon';
-import { SOCIAL_LINKS } from '../constants/constants';
+import { SOCIAL_LINKS } from '../constants';
 import { Loader2, CheckCircle, Send, ArrowRight } from 'lucide-react';
 
 const Contact: React.FC = () => {

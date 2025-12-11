@@ -1,5 +1,5 @@
 import React from 'react';
-import { SOCIAL_LINKS } from '../constants/constants';
+import { SOCIAL_LINKS } from '../constants';
 import { Icon } from './Icon';
 
 const Footer: React.FC = () => {

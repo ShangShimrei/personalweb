@@ -1,5 +1,5 @@
 import React from 'react';
-import { PROJECTS } from '../constants/constants';
+import { PROJECTS } from '../constants';
 import { ArrowRight } from 'lucide-react';
 
 const Portfolio: React.FC = () => {
