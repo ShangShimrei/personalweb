@@ -31,7 +31,7 @@ const Models: React.FC = () => {
                 </span>
               </div>
               
-              <p className="text-zinc-600 mb-6 font-light leading-relaxed flex-grow text-justify text-sm">
+              <p className="text-zinc-600 mb-6 font-light leading-relaxed flex-grow text-justify text-base md:text-lg">
                 {model.description}
               </p>
 

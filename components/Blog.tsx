@@ -24,7 +24,7 @@ const Blog: React.FC = () => {
                <h3 className="text-xl font-serif text-primary mb-3 leading-snug">
                  <a href="#" className="hover:text-zinc-600 transition-colors">{post.title}</a>
                </h3>
-               <p className="text-zinc-600 text-sm leading-relaxed mb-4 flex-grow line-clamp-3 text-justify">
+               <p className="text-zinc-600 font-light leading-relaxed mb-4 flex-grow line-clamp-3 text-justify text-base md:text-lg">
                  {post.excerpt}
                </p>
                <a href="#" className="inline-flex items-center text-xs font-bold text-primary hover:text-zinc-600 transition-colors mt-auto group uppercase tracking-widest">
