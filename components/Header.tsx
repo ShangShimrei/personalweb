@@ -41,8 +41,7 @@ const Header: React.FC = () => {
   };
 
   // Determine header styling
-  // Removed backdrop-blur and transparency opacity for scrolled state to ensure solid visibility on all devices
-  const paddingClass = isScrolled ? 'py-4' : 'py-6';
+  const paddingClass = isScrolled ? 'py-2' : 'py-4';
   
   const headerClass = mobileMenuOpen 
     ? `bg-white ${paddingClass}` 
@@ -54,10 +53,10 @@ const Header: React.FC = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-4 sm:px-6 lg:px-8 ${headerClass}`}
     >
-      <div className="w-full max-w-[1400px] mx-auto flex justify-between items-center relative">
+      <div className="w-full max-w-8xl mx-auto flex justify-between items-center relative">
         <a 
           href="#" 
-          className="text-3xl md:text-4xl font-serif font-bold tracking-tight text-primary z-50 relative" 
+          className="text-3xl md:text-4xl font-display text-primary z-50 relative tracking-wide" 
           onClick={(e) => handleNavClick(e, '#')}
         >
           Shang Shimrei
@@ -69,7 +68,7 @@ const Header: React.FC = () => {
             <a 
               key={item.label} 
               href={item.href}
-              className="text-lg font-medium text-zinc-600 hover:text-primary transition-colors duration-200"
+              className="text-base font-medium text-zinc-600 hover:text-primary transition-colors duration-200"
               onClick={(e) => handleNavClick(e, item.href)}
             >
               {item.label}
@@ -77,7 +76,7 @@ const Header: React.FC = () => {
           ))}
           <a 
             href="#contact" 
-            className="px-6 py-3 text-base font-medium bg-zinc-900 text-white hover:bg-zinc-700 transition-colors rounded-none shadow-md"
+            className="px-5 py-2 text-sm font-medium bg-zinc-900 text-white hover:bg-zinc-700 rounded-none shadow-md transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:scale-95"
             onClick={(e) => handleNavClick(e, '#contact')}
           >
             Get in touch
@@ -90,7 +89,7 @@ const Header: React.FC = () => {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         {/* Mobile Nav Overlay */}
