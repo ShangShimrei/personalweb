@@ -24,12 +24,15 @@ html {
   background-color: #a1a1aa; /* Zinc 400 */
 }
 
-/* Global reveal animation */
+/* 
+   Global reveal animation 
+   Updated to use a "Spring" bezier for a physical, weighty feel 
+   Bezier: cubic-bezier(0.34, 1.56, 0.64, 1) creates a slight overshoot/settle effect
+*/
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  /* Using a "Soft Out" curve for a very elegant finish */
-  transition: opacity 1.4s cubic-bezier(0.25, 1, 0.5, 1), transform 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   will-change: opacity, transform;
 }
 
@@ -42,6 +45,50 @@ html {
 .stagger-2 { transition-delay: 200ms; }
 .stagger-3 { transition-delay: 300ms; }
 .stagger-4 { transition-delay: 400ms; }
+
+/* Cinematic Blur Reveal Keyframes */
+@keyframes blur-reveal {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(10px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-blur-reveal {
+  animation: blur-reveal 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Circuit Line Drawing Animation */
+@keyframes draw-path {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.3; /* Fade out slightly at end or keep visible */
+  }
+}
+
+.animate-draw-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-path 3s cubic-bezier(0.6, 0.05, 0.01, 0.9) forwards;
+}
+
+/* Utility for Spring Hover Effects */
+.spring-hover {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease-out, border-color 0.3s ease;
+}
 
 /* Ultra Slow Floating Animation */
 @keyframes float {
@@ -93,6 +140,15 @@ html {
   }
   .animate-float, .animate-float-reverse {
     animation: none;
+  }
+  .animate-blur-reveal {
+    animation: none;
+    opacity: 1;
+    filter: none;
+  }
+  .animate-draw-path {
+    animation: none;
+    stroke-dashoffset: 0;
   }
 }
 

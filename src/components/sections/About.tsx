@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import TextReveal from '../ui/TextReveal';
 
 const About: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +37,7 @@ const About: React.FC = () => {
 
   // Helper to generate dynamic delay styles for the streaming effect
   const streamDelay = (index: number) => ({
-    animationDelay: `${index * 80}ms` // 80ms interval for a rapid "streaming" feel
+    animationDelay: `${index * 80}ms`
   });
 
   return (
@@ -51,7 +52,9 @@ const About: React.FC = () => {
           {/* Left Column */}
           <div className="lg:col-span-4">
             <div className="stream-element" style={streamDelay(0)}>
-              <h2 className="text-3xl md:text-4xl font-serif mb-4 text-primary">About Me</h2>
+              <h2 className="text-3xl md:text-4xl font-serif mb-4 text-primary">
+                {isVisible ? <TextReveal delay={100}>About Me</TextReveal> : <span className="opacity-0">About Me</span>}
+              </h2>
             </div>
             <div className="stream-element" style={streamDelay(1)}>
               <div className="h-1.5 w-12 bg-zinc-800 mb-4"></div>
